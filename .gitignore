@@ -1,0 +1,6 @@
+node_modules/
+dist/
+*.epub
+.DS_Store
+.wattpad-epub/
+coverage/

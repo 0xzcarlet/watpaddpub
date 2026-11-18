@@ -1,0 +1,38 @@
+{
+  "name": "wattpad-epub",
+  "version": "0.1.0",
+  "description": "Download an accessible Wattpad story as one offline EPUB",
+  "type": "module",
+  "bin": {
+    "wattpad-epub": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "start": "node dist/cli.js",
+    "dev": "node --import tsx src/cli.ts",
+    "test": "node --import tsx --test test/*.test.ts",
+    "check": "tsc --noEmit",
+    "browser:install": "playwright install chromium"
+  },
+  "dependencies": {
+    "cheerio": "^1.2.0",
+    "commander": "^14.0.3",
+    "fast-xml-parser": "^5.3.0",
+    "fflate": "^0.8.2",
+    "playwright": "^1.65.1",
+    "sharp": "^0.35.5"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}
